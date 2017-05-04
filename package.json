@@ -1,39 +1,37 @@
 {
-    "name": "kitchen",
-    "description": "Ghost theme for Chopp Kitchen",
-    "demo": "https://kitchen.chopp.vn",
-    "version": "0.0.1",
-    "engines": {
-        "ghost": ">=0.9.0 <1.0.0"
-    },
-    "scripts": {
-
-    },
-    "license": "MIT",
-    "screenshots": {
-        "desktop": "assets/screenshot-desktop.jpg",
-        "mobile": "assets/screenshot-mobile.jpg"
-    },
-    "author": {
-        "name": "T. Nguyen",
-        "email": "t@chopp.vn",
-        "url": "https://chopp.vn"
-    },
-    "gpm": {
-        "type": "theme",
-        "categories": [
-            "Minimal",
-            "Personal Blogs"
-        ]
-    },
-    "keywords": [
-        "ghost",
-        "theme"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/choppvn/kitchen.git"
-    },
-    "bugs": "https://github.com/choppvn/kitchen/issues",
-    "contributors": "https://github.com/choppvn/kitchen/graphs/contributors"
+  "name": "kitchen",
+  "description": "Ghost theme for Chopp Kitchen",
+  "demo": "https://kitchen.chopp.vn",
+  "version": "0.1.0",
+  "engines": {
+    "ghost": ">=0.9.0 <1.0.0"
+  },
+  "scripts": {},
+  "license": "MIT",
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg",
+    "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "author": {
+    "name": "T. Nguyen",
+    "email": "t@chopp.vn",
+    "url": "https://chopp.vn"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Personal Blogs"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/choppvn/kitchen.git"
+  },
+  "bugs": "https://github.com/choppvn/kitchen/issues",
+  "contributors": "https://github.com/choppvn/kitchen/graphs/contributors"
 }
