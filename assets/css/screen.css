@@ -1028,6 +1028,7 @@ body.page-template .post-title {
 
 .post-title {
     font-weight: normal;
+    line-height: 1.3em;
 }
 
 .post-title a {
