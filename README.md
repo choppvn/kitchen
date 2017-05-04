@@ -1,4 +1,4 @@
-# Chopp
+# Kitchen
 
 Chopp Kitchen theme for [Ghost](http://github.com/tryghost/ghost/).
 
@@ -10,3 +10,6 @@ http://themes.ghost.org/docs/getting-started
 - `$ cd content/themes`
 - `$ git submodule add git@github.com:choppvn/kitchen.git kitchen`
 - `$ grunt dev`
+
+## Package The Theme
+- `$ npm run zip` in the ghost root

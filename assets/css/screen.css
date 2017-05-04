@@ -1256,15 +1256,39 @@ body.page-template .post-title {
     text-decoration: underline;
 }
 
+.post-cover {
+    margin: 1em auto;
+}
+
+.post-cover img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 /* Drop the share links in the space to the right.
    Doing it like this means it's easier for the author bio
    to be flexible at smaller screen sizes while the share
    links remain at a fixed width the whole time */
-.post-footer .share {
+/*.post-footer .share {
     position: absolute;
     top: 3rem;
     right: 0;
     width: 140px;
+}*/
+
+.share {
+    margin-bottom: 1em;
+    padding: 1em 0;
+    border-top: solid 1px #f5f3ee;
+    border-bottom: solid 1px #f5f3ee;
+}
+
+.share-heading {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-weight: normal;
+    letter-spacing: 1px
 }
 
 .post-footer .share a {
