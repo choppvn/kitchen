@@ -1026,6 +1026,10 @@ body.page-template .post-title {
     font-size: 5rem;
 }
 
+.post-title {
+    font-weight: normal;
+}
+
 .post-title a {
     text-decoration: none;
 }
@@ -1208,8 +1212,8 @@ body.page-template .post-title {
 /* The author credit area after the post */
 .post-footer {
     position: relative;
-    margin: 6rem 0 0 0;
-    padding: 3rem 0 0 0;
+    margin: 6rem 0 3rem 0;
+    padding: 0 0 0 0;
     border-top: #EBF2F6 1px solid;
 }
 
@@ -1276,14 +1280,14 @@ body.page-template .post-title {
     width: 140px;
 }*/
 
-.share {
+.post-share {
     margin-bottom: 1em;
     padding: 1em 0;
     border-top: solid 1px #f5f3ee;
     border-bottom: solid 1px #f5f3ee;
 }
 
-.share-heading {
+.post-share-heading {
     font-size: 1.2rem;
     text-transform: uppercase;
     color: #aaaaaa;
@@ -1291,7 +1295,11 @@ body.page-template .post-title {
     letter-spacing: 1px
 }
 
-.post-footer .share a {
+.post-footer .post-share {
+    border-top: none;
+}
+
+.post-footer .post-share a {
     font-size: 1.8rem;
     display: inline-block;
     margin: 1rem 1.6rem 1.6rem 0;
@@ -1299,13 +1307,13 @@ body.page-template .post-title {
     text-decoration: none;
 }
 
-.post-footer .share .icon-twitter:hover {
+.post-footer .post-share .icon-twitter:hover {
     color: #55acee;
 }
-.post-footer .share .icon-facebook:hover {
+.post-footer .post-share .icon-facebook:hover {
     color: #3b5998;
 }
-.post-footer .share .icon-google-plus:hover {
+.post-footer .post-share .icon-google-plus:hover {
     color: #dd4b39;
 }
 
@@ -2117,7 +2125,7 @@ body.page-template .post-title {
     }
 
     .post-footer {
-        padding: 5rem 0 3rem 0;
+        padding: 5rem 0 0 0;
         text-align: center;
     }
 
