@@ -2,7 +2,7 @@
   "name": "kitchen",
   "description": "Ghost theme for Chopp Kitchen",
   "demo": "https://kitchen.chopp.vn",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "engines": {
     "ghost": ">=0.9.0 <1.0.0"
   },
