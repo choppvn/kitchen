@@ -19,15 +19,27 @@
   <article class="{{post_class}}">
 
     <header class="post-header">
-      <h1 class="post-title">{{title}}</h1>
       <section class="post-meta">
-        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+        {{#author}}{{name}}{{/author}} {{tags prefix=" viết trong "}} |
+        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">
+          {{date format="DD-MM-YYYY"}}
+        </time>
       </section>
+      <h1 class="post-title">{{title}}</h1>
     </header>
 
-    <section class="post-share">
+    {{!-- <section class="post-share">
       <h6 class="post-share-heading">Share this post</h6>
       <div class="addthis_inline_share_toolbox"></div>
+    </section> --}}
+
+    <section class="post-share">
+      <div
+        class="fb-like"
+        data-share="true"
+        data-width="720"
+        data-show-faces="true">
+      </div>
     </section>
 
     <section class="post-content">
@@ -35,50 +47,41 @@
     </section>
 
     <footer class="post-footer">
-
-      <section class="post-share">
-        <h6 class="post-share-heading">Share this post</h6>
-
-        <div class="addthis_inline_share_toolbox"></div>
-
-        {{!-- <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
-          onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-          <span class="hidden">Twitter</span>
-        </a>
-        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-          onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-          <span class="hidden">Facebook</span>
-        </a>
-        <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-          <span class="hidden">Google+</span>
-        </a> --}}
-      </section>
-
     {{!-- Everything inside the #author tags pulls data from the author --}}
-    {{#author}}
+      {{#author}}
 
-      {{#if profile_image}}
-      <figure class="author-image">
-        <a class="img" href="{{url}}" style="background-image: url({{profile_image}})"><span class="hidden">{{name}}'s Picture</span></a>
-      </figure>
-      {{/if}}
-
-      <section class="author">
-        <h4><a href="{{url}}">{{name}}</a></h4>
-
-        {{#if bio}}
-          <p>{{bio}}</p>
-        {{else}}
-          <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+        {{#if profile_image}}
+        <figure class="author-image">
+          <a class="img" href="{{url}}" style="background-image: url({{profile_image}})"><span class="hidden">{{name}}'s Picture</span></a>
+        </figure>
         {{/if}}
-        <div class="author-meta">
-          {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
-          {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
-        </div>
-      </section>
 
-    {{/author}}
+        <section class="author">
+          <h4><a href="{{url}}">{{name}}</a></h4>
+
+          {{#if bio}}
+            <p>{{bio}}</p>
+          {{else}}
+            <p>Đọc thêm <a href="{{url}}">những bài viết</a> khác của tác giả này.</p>
+          {{/if}}
+          <div class="author-meta">
+            {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
+            {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+          </div>
+        </section>
+
+      {{/author}}
+      <section class="post-share">
+        <h6 class="post-share-heading">Chia Sẻ Bài Này</h6>
+        <div class="addthis_inline_share_toolbox"></div>
+      </section>
+      <section class="post-comments">
+        <div
+          class="fb-comments"
+          data-href="{{url absolute="true"}}"
+          width="100%"
+          data-numposts="5"></div>
+      </section>
 
       {{!-- Email subscribe form at the bottom of the page --}}
       {{#if @labs.subscribers}}

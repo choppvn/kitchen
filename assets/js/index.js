@@ -53,4 +53,7 @@
         });
 
     };
+
+    // smartquotes.js
+    window.smartquotes && smartquotes();
 })(jQuery);

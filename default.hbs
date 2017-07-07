@@ -13,10 +13,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {{!-- Styles'n'Scripts --}}
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Open+Sans:400,700&amp;subset=vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Spectral:300,400,400i,700|Open+Sans:400,700&amp;subset=vietnamese" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
 
+    {{!-- connect with Instant Article --}}
+    <meta property="fb:pages" content="454592661360226" />
+    {{!-- custome theme for FB Instanst Article --}}
+    <meta property="fb:article_style" content="chopp.vn">
+
+    {{!-- Apple Touch Icon --}}
+    <link rel="icon" href="{{asset "/favicon.png"}}">
+    <link rel="icon" type="image/x-icon" href="{{asset "/favicon.ico"}}">
+
+    {{!-- Apple Touch Icon --}}
+    <link rel="apple-touch-icon" href="{{asset "/touch-icon-iphone.png"}}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{asset "/touch-icon-ipad.png"}}">
+    <link rel="apple-touch-icon" sizes="167x167" href="{{asset "/touch-icon-ipad-retina.png"}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset "/touch-icon-iphone-retina.png"}}">
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
@@ -27,7 +41,6 @@
     {{navigation}}
 
     <div class="site-wrapper">
-
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
 
@@ -45,10 +58,22 @@
     {{ghost_foot}}
     {{!-- Fitvids makes video embeds responsive and awesome --}}
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    {{!-- proper smart quote --}}
+    <script type="text/javascript" src="{{asset "js/smartquotes.js"}}"></script>
     {{!-- The main JavaScript file for Casper --}}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
     {{!-- AddThis Sharing button www.addthis.com/dashboard --}}
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-590aa60db0f79932"></script>
+
+    {{!-- facebook SKD --}}
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9&appId=1581597638789023";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>
