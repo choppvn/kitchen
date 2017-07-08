@@ -11,5 +11,7 @@ http://themes.ghost.org/docs/getting-started
 - `$ git submodule add git@github.com:choppvn/kitchen.git kitchen`
 - `$ grunt dev`
 
-## Package The Theme
-- `$ npm run zip` in the ghost root
+## Build & Release
+- run `npm version minor` to update the package version number
+- `$ npm run build` in this theme folder
+- upload `packaged/kitchen.zip` via admin panel at https://kitchen.chopp.vn/admin
