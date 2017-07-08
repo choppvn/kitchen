@@ -1035,7 +1035,7 @@ body.page-template .post-title {
 .post-title {
     font-family: "Spectral", Georgia, serif;
     font-size: 6.854rem;
-    line-height: 1.4em;
+    line-height: 1.2em;
     letter-spacing: -1px;
     font-weight: 300;
     color: #130f01;
@@ -1211,7 +1211,7 @@ body.page-template .post-title {
 }
 .post-content h2 {
     font-size: 2.618rem;
-    margin-top: 2em;
+    margin-top: 1em;
     font-family: "Spectral", Georgia, serif;
     font-weight: bold;
     letter-spacing: -1px;
