@@ -1048,7 +1048,6 @@ body.page-template .post-title {
 
 .post-title a:hover {
     text-decoration: none;
-    border-bottom: solid 1px #f5f3ee;
 }
 
 .post-excerpt p {
@@ -1059,14 +1058,12 @@ body.page-template .post-title {
 
 .read-more {
     text-decoration: none;
-    background: #fff688;
     color: #130f01;
 }
 
 .read-more:hover {
     text-decoration: none;
-    background: #fa7f50;
-    color: white;
+    color: #fa7f50;
 }
 
 .post-meta {
