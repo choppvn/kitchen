@@ -6,6 +6,9 @@
   "engines": {
     "ghost": ">=1.2.0"
   },
+  "scripts": {
+    "build": "./build.sh"
+  },
   "license": "MIT",
   "screenshots": {
     "desktop": "assets/screenshot-desktop.jpg",

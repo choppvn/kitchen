@@ -1,12 +1,6 @@
-# Casper
+# Casper In The Kitchen
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper. If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
-
-&nbsp;
-
-![screenshot-desktop](https://user-images.githubusercontent.com/120485/27221326-1e31d326-5280-11e7-866d-82d550a7683b.jpg)
-
-&nbsp;
+Chopp Kitchen theme for [Ghost](http://github.com/tryghost/ghost/).
 
 # First time using a Ghost theme?
 
@@ -40,6 +34,10 @@ Casper styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'l
 
 Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
 
+## Build & Release
+- run `npm version minor` to update the package version number
+- `$ npm run build` in this theme folder
+- upload `packaged/kitchen.zip` via admin panel at https://kitchen.chopp.vn/admin
 
 # PostCSS Features Used
 
