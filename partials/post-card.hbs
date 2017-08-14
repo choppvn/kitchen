@@ -18,14 +18,22 @@
     </a>
     <footer class="post-card-meta">
       <!-- Go to www.addthis.com/dashboard to customize your tools -->
-      <!-- Go to www.addthis.com/dashboard to customize your tools -->
-      <div
+      {{!-- <div
         class="addthis_inline_share_toolbox_p52v_dwy8"
         data-url="{{url absolute="true"}}"
         data-title="{{title}}"
         data-description="{{excerpt words="33"}}"
       >
-      </div>
+      </div> --}}
+
+      <div
+        class="fb-like"
+        data-layout="button_count"
+        data-size="small"
+        data-share="true"
+        data-action="like"
+        data-href="{{url absolute="true"}}"
+      ></div>
 
       {{!-- {{#if author.profile_image}}
         <img class="author-profile-image" src="{{author.profile_image}}" alt="{{author.name}}" />
