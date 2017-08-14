@@ -6,11 +6,17 @@
 (function ($, undefined) {
     "use strict";
 
-    var $document = $(document);
 
-    $document.ready(function () {
-        // smartquotes.js
-        window.smartquotes && smartquotes();
+    $(document).ready(function() {
+      // smartquotes.js
+      window.smartquotes && smartquotes();
+
+      // Lazy load all images with class '.lazy'
+      $('.lazy').Lazy({
+        effect: 'fadeIn',
+        effectTime: 300,
+        threshold: 0
+      });
     });
 
 })(jQuery);
