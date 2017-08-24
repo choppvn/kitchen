@@ -992,6 +992,7 @@ Usage (In Ghost editor):
 .post-full-content h3 {
     font-size: 2.5rem;
     font-weight: bold;
+    font-family: var(--fontSans);
 }
 
 .post-full-content h4 {
@@ -1210,7 +1211,7 @@ Usage (In Ghost editor):
         font-size: 2rem;
     }
     .post-full-content h3 {
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
 }
 
