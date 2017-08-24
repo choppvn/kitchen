@@ -701,6 +701,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     text-align: center;
     font-family: var(--fontSerif);
     font-style: italic;
+    line-height: 1.5em;
 }
 
 /* ALIGNMENT */
@@ -708,16 +709,20 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-content figure.to-right {
     float: left;
     width: 50%;
+    margin: 0 1em 0 0;
 }
 
 
 .post-full-content figure.to-right {
     float: right;
+    margin: 0 0 0 1em;
 }
 
 .post-full-content figure.to-left img,
 .post-full-content figure.to-right img {
     width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .post-full-content figure.to-full {
@@ -732,10 +737,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
     max-width: none;
 }
 
-.post-full-content figure.to-full figcaption {
-    padding-left: 1em;
-    padding-right: 1em;
-}
 
 @media (min-width: 768px) {
     .post-full-content figure.to-full figcaption {
@@ -743,9 +744,9 @@ The first (most recent) post in the list is styled to be bigger than the others 
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(0,0,0, 0.9);
-        padding: 0.5em 1em;
-        color: var(--colorTextLight);
+        background: rgba(255,255,255, 0.95);
+        padding: 1.5em;
+        color: var(--colorTextDark);
     }
 }
 
@@ -756,6 +757,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
         max-width: 300px;
         left: 10%;
         right: auto;
+        text-align: left;
     }
 
     .post-full-content figure.to-full figcaption.to-right {
@@ -764,6 +766,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
         max-width: 300px;
         left: auto;
         right: 10%;
+        text-align: left;
     }
 }
 
@@ -845,14 +848,27 @@ Usage (In Ghost editor):
 
 .post-full-content blockquote {
     margin: 0 0 1.5em 0;
-    padding: 1.5em 0;
+    padding: 0;
     border: 0;
-    color: var(--colorTextSecondary);
-    font-size: 3rem;
-    line-height: 1.6em;
-    text-align: center;
+    color: var(--colorTextDark);
     font-family: var(--fontSerif);
     font-style: italic;
+    max-width: 100%;
+}
+
+.post-full-content blockquote,
+.post-full-content blockquote p {
+    color: var(--colorTextDark);
+}
+
+.post-full-content blockquote p {
+    border-left: solid 2px var(--colorTextDark);
+    padding-left: 1em;
+}
+
+.post-full-content blockquote cite {
+    font-family: var(--fontSans);
+    font-size: 1.2rem;
 }
 
 .post-full-content blockquote:before {
@@ -863,10 +879,25 @@ Usage (In Ghost editor):
     margin: 0;
 }
 
+.post-full-content blockquote .fancy {
+    display: block;
+    font-size: 3rem;
+    line-height: 1.6em;
+    padding: 1.5em 0;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-left: none;
+}
+
+.post-full-content blockquote cite {
+    display: block;
+    font-style: normal;
+}
+
 @media (min-width: 1000px) {
-    .post-full-content blockquote {
-        width: 100vw;
-        max-width: 1060px;
+    .post-full-content blockquote .fancy {
+        width: 80vw;
     }
 }
 
