@@ -20,14 +20,16 @@
     --colorBrandHot: #fa7f50;
     --colorBrandPeace: #45d8c0;
     --colorDark: #130f01;
+    --colorTextLight: #ffffff;
     --colorTextDark: #130f01;
+    --colorTextCopy: #4c4c4c;
     --colorShiny: #fffcf4;
     --colorMeta: #bebbb0;
     --colorTextSecondary: #94907f;
     --colorMuted: #f5f3ee;
     --colorBorder: #f5f3ee;
 
-    --fontSans: 'Source Sans Pro', 'Open Sans', Arial, sans-serif;
+    --fontSans: 'Open Sans', Arial, sans-serif;
     --fontSerif: 'Spectral', Georgia, serif;
 }
 
@@ -350,7 +352,8 @@ p,
 ul,
 ol,
 dl,
-blockquote {
+blockquote,
+figure {
     margin: 0 0 1.5em 0;
 }
 

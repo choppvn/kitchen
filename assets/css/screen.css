@@ -429,6 +429,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin: 0;
     color: var(--colorDark);
     letter-spacing: -1px;
+    font-weight: normal;
 }
 
 .post-card-title {
@@ -628,7 +629,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 @media (max-width: 800px) {
     .post-full-content {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -669,14 +670,14 @@ The first (most recent) post in the list is styled to be bigger than the others 
     display: none;
 }
 
-.kg-card-markdown {
+/*.kg-card-markdown {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 920px;
-}
+}*/
 
-.post-full-content p,
+/*.post-full-content p,
 .post-full-content ul,
 .post-full-content ol,
 .post-full-content dl,
@@ -690,6 +691,80 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-comments,
 .footnotes {
     min-width: 100%;
+}*/
+
+.post-full-content p {
+    color: var(--colorTextCopy);
+}
+
+.post-full-content figcaption {
+    text-align: center;
+    font-family: var(--fontSerif);
+    font-style: italic;
+}
+
+/* ALIGNMENT */
+.post-full-content figure.to-left,
+.post-full-content figure.to-right {
+    float: left;
+    width: 50%;
+}
+
+
+.post-full-content figure.to-right {
+    float: right;
+}
+
+.post-full-content figure.to-left img,
+.post-full-content figure.to-right img {
+    width: 100%;
+}
+
+.post-full-content figure.to-full {
+    position: relative;
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.post-full-content figure.to-full img {
+    width: 100%;
+    max-width: none;
+}
+
+.post-full-content figure.to-full figcaption {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+@media (min-width: 768px) {
+    .post-full-content figure.to-full figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0, 0.9);
+        padding: 0.5em 1em;
+        color: var(--colorTextLight);
+    }
+}
+
+@media (min-width: 1040px) {
+    .post-full-content figure.to-full figcaption.to-left {
+        top: 25%;
+        bottom: auto;
+        max-width: 300px;
+        left: 10%;
+        right: auto;
+    }
+
+    .post-full-content figure.to-full figcaption.to-right {
+        top: 25%;
+        bottom: auto;
+        max-width: 300px;
+        left: auto;
+        right: 10%;
+    }
 }
 
 .post-template .kg-card-markdown > p:first-child {
@@ -725,6 +800,8 @@ The first (most recent) post in the list is styled to be bigger than the others 
     display: block;
     max-width: 1040px;
     margin: 1.5em auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 @media (max-width: 1040px) {
     .post-full-content img,
@@ -858,7 +935,7 @@ Usage (In Ghost editor):
     padding-top: 75px;
     color: var(--colorDark);
     font-family: var(--fontSerif);
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .post-full-content h1 {
@@ -867,12 +944,14 @@ Usage (In Ghost editor):
 }
 
 .post-full-content h2 {
-    font-size: 3.5rem;
-    letter-spacing: -1px;
+    font-size: 3rem;
+    font-weight: normal;
+    letter-spacing: -0.5px;
 }
 
 .post-full-content h3 {
     font-size: 2.5rem;
+    font-weight: bold;
 }
 
 .post-full-content h4 {
@@ -915,37 +994,6 @@ Usage (In Ghost editor):
     font-weight: bold;
     text-decoration: none !important;
     box-shadow: none !important;
-}
-
-/* Some grouped styles for smaller viewports */
-@media (max-width: 500px) {
-    .post-full-meta {
-        font-size: 1.2rem;
-        line-height: 1.3em;
-    }
-    .post-full-title {
-        font-size: 2.9rem;
-    }
-    .post-full-image {
-        height: 350px;
-        margin-bottom: 4vw;
-    }
-    .post-full-content {
-        padding: 0;
-    }
-    .post-full-content:before,
-    .post-full-content:after {
-        display: none;
-    }
-    .post-full-content h1 {
-        font-size: 2.9rem;
-    }
-    .post-full-content h2 {
-        font-size: 2.9rem;
-    }
-    .post-full-content h3 {
-        font-size: 2rem;
-    }
 }
 
 /* Tables */
@@ -1092,6 +1140,38 @@ Usage (In Ghost editor):
 .subscribe-form button:active,
 .subscribe-form button:focus {
     background: color(var(--blue) lightness(-9%) saturation(-10%));
+}
+
+/* Some grouped styles for smaller viewports */
+@media (max-width: 500px) {
+    .post-full-meta {
+        font-size: 1.2rem;
+        line-height: 1.3em;
+        margin-bottom: 0.7em;
+    }
+    .post-full-title {
+        font-size: 2.5rem;
+    }
+    .post-full-image {
+        height: 350px;
+        margin-bottom: 4vw;
+    }
+    .post-full-content {
+        padding: 0;
+    }
+    .post-full-content:before,
+    .post-full-content:after {
+        display: none;
+    }
+    .post-full-content h1 {
+        font-size: 2.2rem;
+    }
+    .post-full-content h2 {
+        font-size: 2rem;
+    }
+    .post-full-content h3 {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 650px) {
@@ -1505,8 +1585,7 @@ Usage (In Ghost editor):
 
 .progress::-webkit-progress-bar {
     /*background-color: transparent;*/
-    background-color: var(--colorBrandPeace);
-
+    background-color: var(--colorBorder);
 }
 
 .progress::-webkit-progress-value {
