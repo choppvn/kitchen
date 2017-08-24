@@ -702,6 +702,8 @@ The first (most recent) post in the list is styled to be bigger than the others 
     font-family: var(--fontSerif);
     font-style: italic;
     line-height: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 /* ALIGNMENT */
@@ -744,9 +746,9 @@ The first (most recent) post in the list is styled to be bigger than the others 
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(255,255,255, 0.95);
-        padding: 1.5em;
-        color: var(--colorTextDark);
+        background: rgba(0,0,0,0.9);
+        padding: 1em;
+        color: var(--colorTextLight);
     }
 }
 
@@ -758,6 +760,9 @@ The first (most recent) post in the list is styled to be bigger than the others 
         left: 10%;
         right: auto;
         text-align: left;
+        background: rgba(255,255,255, 0.95);
+        padding: 1.5em;
+        color: var(--colorTextDark);
     }
 
     .post-full-content figure.to-full figcaption.to-right {
@@ -767,6 +772,9 @@ The first (most recent) post in the list is styled to be bigger than the others 
         left: auto;
         right: 10%;
         text-align: left;
+        background: rgba(255,255,255, 0.95);
+        padding: 1.5em;
+        color: var(--colorTextDark);
     }
 }
 
@@ -802,7 +810,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-content video {
     display: block;
     max-width: 1040px;
-    margin: 1.5em auto;
+    margin: 1.5em auto 0.5em;
     margin-left: 50%;
     transform: translateX(-50%);
 }
@@ -888,6 +896,7 @@ Usage (In Ghost editor):
     margin-left: 50%;
     transform: translateX(-50%);
     border-left: none;
+    width: 100%;
 }
 
 .post-full-content blockquote cite {
