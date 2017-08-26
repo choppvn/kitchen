@@ -29,8 +29,12 @@
     --colorMuted: #f5f3ee;
     --colorBorder: #f5f3ee;
 
-    --fontSans: 'Open Sans', Arial, sans-serif;
-    --fontSerif: 'Spectral', Georgia, serif;
+    --fontSans: "Open Sans", Arial, sans-serif;
+    --fontSerif: "skolar-latin", Georgia, serif;
+
+    --fontHeading: "minion-pro-display", Georgia, serif;
+    --fontCopy: "skolar-latin", Georgia, serif;
+    --fontMeta: "Avenir", "Open Sans", Arial, sans-serif;
 }
 
 /* Reset
@@ -497,4 +501,40 @@ h6 {
     margin: 1.5em 0 0.5em 0;
     font-size: 1.4rem;
     font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+li {
+    visibility: hidden;
+}
+
+.wf-active h1,
+.wf-active h2,
+.wf-active h3,
+.wf-active h4,
+.wf-active h5,
+.wf-active h6,
+.wf-active p,
+.wf-active a,
+.wf-active span,
+.wf-active li,
+.wf-inactive h1,
+.wf-inactive h2,
+.wf-inactive h3,
+.wf-inactive h4,
+.wf-inactive h5,
+.wf-inactive h6,
+.wf-inactive p,
+.wf-inactive a,
+.wf-inactive span,
+.wf-inactive li {
+    visibility: visible;
 }

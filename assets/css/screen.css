@@ -29,7 +29,7 @@ production stylesheet in assets/built/screen.css
 @import "global.css";
 
 body {
-    font-family: var(--fontSans);
+    font-family: var(--fontCopy);
     background: var(--colorShiny);
 }
 
@@ -108,6 +108,7 @@ body {
     display: none;
 }
 
+
 .site-header-content {
     display: flex;
     flex-direction: column;
@@ -129,8 +130,8 @@ body {
     font-size: 5rem;
     padding: 0.2em 0.5em;
     font-weight: normal;
-    font-family: var(--fontSerif);
-    letter-spacing: -2px;
+    font-family: var(--fontHeading);
+    letter-spacing: -1px;
     text-shadow: 0 0 3px rgba(0,0,0,0.5);
 }
 
@@ -142,6 +143,18 @@ body {
     font-weight: normal;
     text-shadow: 0 0 3px rgba(0,0,0,0.5);
     letter-spacing: -0.5px;
+    font-style: italic;
+}
+
+.site-header.no-cover .site-title,
+.site-header.no-cover .site-description {
+    color: var(--colorTextDark);
+    text-shadow: none;
+}
+
+.site-header.no-cover .site-description {
+    color: var(--colorTextDark);
+    opacity: 0.4;
 }
 
 @media (max-width: 500px) {
@@ -165,7 +178,6 @@ body {
     align-items: flex-start;
     height: 40px;
     overflow-y: hidden;
-    font-size: 1.2rem;
 }
 
 .site-nav-left {
@@ -175,7 +187,6 @@ body {
     overflow-y: hidden;
     margin-right: 10px;
     padding-bottom: 80px;
-    letter-spacing: 0.4px;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-scrolling: touch;
@@ -189,16 +200,23 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 */
 
+.site-nav-logo,
+.nav li a {
+    font-size: 1.25em;
+    line-height: 1em;
+    text-transform: uppercase;
+    font-family: var(--fontHeading);
+}
+
 .site-nav-logo {
     flex-shrink: 0;
     display: block;
-    margin-right: 24px;
-    padding: 9px 0;
-    font-size: 1.8rem;
-    line-height: 1em;
+    margin-right: 1em;
     font-weight: bold;
-    letter-spacing: -0.5px;
     color: var(--colorTextDark);
+    letter-spacing: 1px;
+    font-family: var(--fontHeading);
+    padding: 0.5em 0;
 }
 
 .site-nav-logo:hover {
@@ -222,21 +240,17 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: block;
     margin: 0;
     padding: 0;
-    text-transform: uppercase;
 }
 
 .nav li a {
-    font-size: 1.8rem;
-    line-height: 1em;
     display: block;
     margin: 0;
     color: var(--colorDark);
-    letter-spacing: 1px;
 }
 
 .nav li a:hover {
     text-decoration: none;
-    opacity: 1;
+    color: var(--colorBrandHot);
 }
 
 .nav li.nav-current a {
@@ -422,20 +436,18 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .post-full-title,
 .post-card-title {
-    font-family: var(--fontSerif);
+    font-family: var(--fontHeading);
 }
 
 .post-full-title {
     margin: 0;
     color: var(--colorDark);
-    letter-spacing: -1px;
-    font-weight: normal;
 }
 
 .post-card-title {
     margin-top: 0;
-    font-size: 1.5em;
-    line-height: 1.25em;
+    font-size: 2em;
+    line-height: 1.2em;
     letter-spacing: -0.5px;
 }
 
@@ -446,8 +458,10 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     justify-content: space-between;
 }
 
-.post-card-excerpt {
-
+.post-card-excerpt p {
+    color: color(var(--colorTextCopy) l(+20%));
+    font-family: var(--fontCopy);
+    font-size: 1.125em;
 }
 
 .post-card-meta {
@@ -496,14 +510,14 @@ The first (most recent) post in the list is styled to be bigger than the others 
     }
 
     .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) h2 {
-        font-size: 3rem;
+        font-size: 4rem;
         margin-left: -200px;
         padding: 0.2em 0.5em;
         background: white;
     }
 
     .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) p {
-        font-size: 1.125em;
+        font-size: 1.2em;
     }
 
     .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-content-link {
@@ -566,6 +580,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     font-size: 1.4rem;
     font-weight: 600;
     text-transform: uppercase;
+    font-family: var(--fontMeta);
 }
 
 .post-full-meta a,
@@ -613,12 +628,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-full-content {
     font-size: 2rem;
-}
-
-.post-full-content h1,
-.post-full-content h2,
-.post-full-content h3 {
-    font-family: var(--fontSerif);
 }
 
 @media (max-width: 1170px) {
@@ -695,10 +704,11 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-full-content p {
     color: var(--colorTextCopy);
+    font-family: var(--fontCopy);
 }
 
 .post-full-content figcaption {
-    font-family: var(--fontSerif);
+    font-family: var(--fontCopy);
     font-style: italic;
     line-height: 1.5em;
     padding-left: 2em;
@@ -758,6 +768,18 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 @media (min-width: 940px) {
+    .post-full-content figure.to-full figcaption.to-left:first-letter,
+    .post-full-content figure.to-full figcaption.to-right:first-letter {
+        font-size: 3em;
+        line-height: 1em;
+        font-family: var(--fontHeading);
+        font-style: normal;
+        display: block;
+        float: left;
+        margin: 0 0.05em 0 0;
+        font-weight: bold;
+    }
+
     .post-full-content figure.to-full figcaption.to-left {
         top: 25%;
         bottom: auto;
@@ -877,7 +899,6 @@ Usage (In Ghost editor):
     padding: 0;
     border: 0;
     color: var(--colorTextDark);
-    font-family: var(--fontSerif);
     font-style: italic;
     max-width: 100%;
 }
@@ -893,8 +914,9 @@ Usage (In Ghost editor):
 }
 
 .post-full-content blockquote cite {
-    font-family: var(--fontSans);
+    font-family: var(--fontMeta);
     font-size: 1.2rem;
+    color: var(--colorMeta);
 }
 
 .post-full-content blockquote:before {
@@ -915,6 +937,8 @@ Usage (In Ghost editor):
     transform: translateX(-50%);
     border-left: none;
     width: 100%;
+    font-family: var(--fontHeading);
+    font-style: normal;
 }
 
 .post-full-content blockquote cite {
@@ -992,25 +1016,22 @@ Usage (In Ghost editor):
     margin-top: -75px;
     padding-top: 75px;
     color: var(--colorDark);
-    font-family: var(--fontSerif);
+    font-family: var(--fontHeading);
     font-weight: normal;
 }
 
 .post-full-content h1 {
     font-size: 5rem;
-    letter-spacing: -1px;
 }
 
 .post-full-content h2 {
     font-size: 3rem;
-    font-weight: normal;
-    letter-spacing: -0.5px;
+    font-weight: bold;
 }
 
 .post-full-content h3 {
     font-size: 2.5rem;
-    font-weight: bold;
-    font-family: var(--fontSans);
+    font-family: var(--fontSerif);
 }
 
 .post-full-content h4 {
