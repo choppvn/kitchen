@@ -28,13 +28,23 @@
         {{!-- The footer at the very bottom of the screen --}}
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+
+                <div class="widget-fb-page">
+                    <div class="fb-page" data-href="https://www.facebook.com/chopp.vn/" data-small-header="false" data-adapt-container-width="true"
+                    data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/chopp.vn/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/chopp.vn/">chopp.vn</a></blockquote></div>
+                </div>
+
+                <a href="{{@blog.url}}">{{@blog.title}}</a> &copy;
+                {{date format="YYYY"}}
+                <br />
+
                 <nav class="site-footer-nav">
                     <a href="{{@blog.url}}">Latest Posts</a>
                     {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" target="_blank">Facebook</a>{{/if}}
                     {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank">Twitter</a>{{/if}}
                     <a href="https://ghost.org" target="_blank">Ghost</a>
                 </nav>
+                <br />
             </div>
         </footer>
 

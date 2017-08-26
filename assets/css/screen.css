@@ -639,7 +639,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 @media (max-width: 800px) {
     .post-full-content {
-        font-size: 1.4rem;
+        font-size: 1em;
     }
 }
 
@@ -703,7 +703,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     min-width: 100%;
 }*/
 
-.post-full-content p {
+.post-full-content {
     color: var(--colorTextCopy);
     font-family: var(--fontCopy);
 }
@@ -2008,35 +2008,26 @@ Usage (In Ghost editor):
     position: relative;
     padding-top: 20px;
     padding-bottom: 60px;
-    color: #fff;
-    background: color(var(--darkgrey) l(-15%));
+    border-top: solid 1px var(--colorBorder);
 }
 
 .site-footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    color: rgba(255,255,255,0.7);
-    font-size: 1.3rem;
+    color: var(--colorMeta);
+    font-family: var(--fontMeta);
 }
 
 .site-footer-content a {
-    color: rgba(255,255,255,0.7);;
-}
-
-.site-footer-content a:hover {
-    color: rgba(255,255,255,1);
-    text-decoration: none;
+    color: var(--colorTextCopy);
 }
 
 .site-footer-nav {
     display: flex;
+    font-size: 0.875em;
 }
 
 .site-footer-nav a {
     position: relative;
-    margin-left: 20px;
+    margin-right: 2em
 }
 
 .site-footer-nav a:before {
@@ -2047,7 +2038,7 @@ Usage (In Ghost editor):
     display: block;
     width: 2px;
     height: 2px;
-    background: #fff;
+    background: var(--colorDark);
     border-radius: 100%;
 }
 
@@ -2061,5 +2052,19 @@ Usage (In Ghost editor):
     }
     .site-footer-nav a:first-child {
         margin-left: 0;
+    }
+}
+
+.widget-fb-page {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+@media (min-width: 650px) {
+    .widget-fb-page {
+        display: block;
+        max-width: 20em;
+        float: left;
+        margin-right: 2em;
     }
 }
