@@ -202,10 +202,18 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .site-nav-logo,
 .nav li a {
-    font-size: 1.25em;
+    font-size: 0.875em;
     line-height: 1em;
     text-transform: uppercase;
+    letter-spacing: 1px;
     font-family: var(--fontHeading);
+}
+
+@media (min-width: 900px) {
+    .site-nav-logo,
+    .nav li a {
+        font-size: 1.25em;
+    }
 }
 
 .site-nav-logo {
@@ -244,6 +252,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .nav li a {
     display: block;
+    padding: 0.2em 0.5em;
     margin: 0;
     color: var(--colorDark);
 }
@@ -264,13 +273,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .home-template .nav li a {
     padding: 0.5em 1em;
-}
-
-@media (max-width: 500px) {
-    .nav li a {
-        font-size: 1.2em;
-        padding: 0.2em 0.5em;
-    }
 }
 
 .site-nav-right {
@@ -408,7 +410,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .post-card-image {
     width: auto;
     height: 200px;
-    background: var(--colorBrand) no-repeat center center;
+    background: var(--colorLight) no-repeat center center;
     background-size: cover;
 }
 
@@ -447,9 +449,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .post-card-title {
     margin-top: 0;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1.2em;
-    letter-spacing: -0.5px;
 }
 
 .post-card-content {
@@ -489,7 +490,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
  */
 
-@media (min-width: 795px) {
+@media (min-width: 769px) {
     .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) {
         flex: 1 1 100%;
         flex-direction: row;
@@ -751,7 +752,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .post-full-content figure.to-full figcaption {
         position: absolute;
         bottom: 0;
@@ -2009,6 +2010,7 @@ Usage (In Ghost editor):
     padding-top: 20px;
     padding-bottom: 60px;
     border-top: solid 1px var(--colorBorder);
+    margin-top: 5em;
 }
 
 .site-footer-content {
@@ -2066,5 +2068,37 @@ Usage (In Ghost editor):
         max-width: 20em;
         float: left;
         margin-right: 2em;
+    }
+}
+
+.group {
+    margin-top: 2em;
+}
+
+.group-heading {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+    font-family: var(--fontHeading);
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.group-heading a {
+    color: var(--colorTextSecondary);
+}
+
+/*.group-count {
+    color: var(--colorTextSecondary);
+}*/
+
+@media (min-width: 900px) {
+    .group {
+        margin-top: 5em;
+    }
+
+    .group-heading {
+        margin-bottom: 100px;
     }
 }

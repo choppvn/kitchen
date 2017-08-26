@@ -32,5 +32,13 @@ into the {body} of the default.hbs template --}}
             {{/foreach}}
         </div>
 
+        <div class="groups">
+
+            {{#get "tags" filter="slug:an-cau-nguyen-yeu,slug:tra-sua-cho-tam-hon,slug:nhung-ngay-buon-mieng,slug:an-xanh-song-khoe,slug:keo-tu-nhien,slug:huong-vi-cua-bien,slug:1-2-3-ta-cung-detox,slug:com-co-dam,slug:fail-check" include="count.posts" as |group-tag|}}
+                {{#group-tag}}
+                    {{> "group" }}
+                {{/group-tag}}
+            {{/get}}
+        </div>
     </div>
 </main>

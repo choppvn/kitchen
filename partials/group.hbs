@@ -1,0 +1,18 @@
+<div class="group">
+    <h2 class="group-heading">
+        <a href="{{url}}" title="{{name}}">
+            &mdash;{{name}}
+            <span class="group-count">({{count.posts}})</span>
+            &mdash;
+        </a>
+    </h2>
+    {{#get "posts" filter="tags:{{slug}}" limit="3" include="author, tag" as |group-posts|}}
+        {{#if group-posts}}
+            <div class="post-feed">
+                {{#foreach group-posts}}
+                    {{> "post-card"}}
+                {{/foreach}}
+                </div>
+        {{/if}}
+    {{/get}}
+</div>
