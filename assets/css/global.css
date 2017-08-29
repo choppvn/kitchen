@@ -30,11 +30,11 @@
     --colorMuted: #f5f3ee;
     --colorBorder: #f5f3ee;
 
-    --fontSans: "Open Sans", Arial, sans-serif;
+    --fontSans: "Avenir", "Open Sans", Arial, sans-serif;
     --fontSerif: "skolar-latin", Georgia, serif;
 
     --fontHeading: "minion-pro-display", Georgia, serif;
-    --fontCopy: "skolar-latin", Georgia, serif;
+    --fontCopy: "alda", "skolar-latin", Georgia, serif;
     --fontMeta: "Avenir", "Open Sans", Arial, sans-serif;
 }
 
