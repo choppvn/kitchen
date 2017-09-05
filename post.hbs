@@ -44,22 +44,23 @@ into the {body} of the default.hbs template --}}
       {{/if}}
 
 
-      <section class="post-full-content">
+      <section class="post-wrapper post-full-content">
         {{content}}
       </section>
 
+
+      {{> "post-footer" }}
+
       {{!-- Email subscribe form at the bottom of the page --}}
       {{#if @labs.subscribers}}
-      <section class="subscribe-form">
+      <section class="post-wrapper subscribe-form">
         <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
         <p>Get the latest posts delivered right to your inbox</p>
         {{subscribe_form placeholder="youremail@example.com"}}
       </section>
       {{/if}}
 
-
-
-      <footer class="post-full-footer">
+      <footer class="post-wrapper post-full-footer">
         <div class="post-full-footer-meta">
           <section class="post-share">
             <h6 class="post-share-heading">Chia Sẻ Bài Này</h6>

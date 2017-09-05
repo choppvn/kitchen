@@ -631,32 +631,29 @@ The first (most recent) post in the list is styled to be bigger than the others 
     }
 }
 
-.post-full-content,
-.post-full-footer {
+.post-wrapper {
     position: relative;
     min-height: 230px;
     margin: 0 auto;
     padding: 70px 150px 0;
-    font-size: 1.6rem;
+    font-size: 1.25em;
     line-height: 1.6em;
     background: #fff;
+
 }
 
-.post-full-content {
-    font-size: 2rem;
-}
-
-@media (max-width: 1170px) {
-    .post-full-content,
-    .post-full-footer {
-        padding: 5vw 7vw 0;
-    }
-}
 @media (max-width: 800px) {
-    .post-full-content {
+    .post-wrapper {
         font-size: 1em;
     }
 }
+
+@media (max-width: 1170px) {
+    .post-wrapper {
+        padding: 5vw 0 0;
+    }
+}
+
 
 .post-full-content:before {
     content: "";
@@ -1064,6 +1061,86 @@ Usage (In Ghost editor):
 
 .post-share {
     margin-bottom: 1em;
+}
+
+.post-footer-cta {
+    border-top: solid 1px var(--colorBorder);
+    border-bottom: solid 1px var(--colorBorder);
+    margin: 2em auto;
+    padding: 2em 1em ;
+    background: var(--colorBrand);
+}
+
+.post-footer-cta ul {
+    padding: 0;
+}
+
+.post-footer-cta-wrapper {
+    max-width: 32em;
+    margin: 0 auto;
+}
+
+.post-footer-cta .cta-intro {
+    overflow: hidden;
+    margin: 1em auto;
+    text-align: center;
+}
+
+.post-footer-cta .cta-logo {
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.post-footer-cta .cta-description {
+    display: block;
+    font-family: var(--fontHeading);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.post-footer-cta .cta-links {
+    text-align: center;
+}
+
+
+.post-footer-cta ul.cta-values {
+    list-style: none;
+}
+
+.post-footer-cta li.cta-value {
+  padding-left: 1em;
+}
+
+
+.post-footer-cta li.cta-value:before {
+  content: "\1f5f8";
+  display: inline-block;
+  margin-left: -1em; /* same as padding-left set on li */
+  width: 1em; /* same as padding-left set on li */
+}
+
+
+.post-footer-cta .cta-downloads {
+    text-align: center;
+}
+
+.post-footer-cta .cta-downloads strong {
+    display: block;
+    font-weight: normal;
+    font-family: var(--fontCopy);
+    color: var(--colorTextSecondary);
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
+.post-footer-cta .cta-downloads img {
+    max-width: 140px;
+}
+
+
+.post-footer-cta .cta-downloads a {
+    color: var(--colorTextDark);
 }
 
 .post-share-heading {

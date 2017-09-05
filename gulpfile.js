@@ -13,6 +13,7 @@ var colorFunction = require('postcss-color-function');
 var cssnano = require('cssnano');
 var customProperties = require('postcss-custom-properties');
 var easyimport = require('postcss-easy-import');
+var precss = require('precss');
 
 var swallowError = function swallowError(error) {
     gutil.log(error.toString());
@@ -32,6 +33,7 @@ gulp.task('css', function () {
     var processors = [
         easyimport,
         customProperties,
+        precss,
         colorFunction(),
         autoprefixer({browsers: ['last 2 versions']}),
         cssnano()
