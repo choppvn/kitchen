@@ -2,7 +2,7 @@
   "name": "casper-in-the-kitchen",
   "description": "Casper theme for Chopp",
   "demo": "https://blog.chopp.vn",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "engines": {
     "ghost": ">=1.2.0"
   },
@@ -55,6 +55,5 @@
   "config": {
     "posts_per_page": 25
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
