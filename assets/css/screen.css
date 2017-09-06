@@ -1129,7 +1129,7 @@ Usage (In Ghost editor):
     display: block;
     font-weight: normal;
     font-family: var(--fontCopy);
-    color: var(--colorTextSecondary);
+    color: color(var(--colorTextDark) a(60%));
     margin-bottom: 1em;
     font-style: italic;
 }
