@@ -1061,6 +1061,11 @@ Usage (In Ghost editor):
     background-repeat: no-repeat;
     background-position: 5% 20px;
 
+    @media(max-width: 800px) {
+        padding-bottom: 22em;
+        background-position: center 95%;
+    }
+
     ul {
         padding: 0;
     }
